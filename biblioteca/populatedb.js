@@ -102,6 +102,7 @@ async function createAuthors() {
     authorCreate(2, "Isaac", "Asimov", "1920-01-02", "1992-04-06"),
     authorCreate(3, "Bob", "Billings", false, false),
     authorCreate(4, "Jim", "Jones", "1971-12-16", false),
+    authorCreate(5, "Vitória", "Behenck", "2009-01-17", false),
   ]);
 }
 
@@ -150,9 +151,9 @@ async function createBooks() {
     ),
     bookCreate(
       5,
-      "Test Book 1",
-      "Summary of test book 1",
-      "ISBN111111",
+      "Culinária para Iniciantes",
+      "Encontre várias receitas fáceis e deliciosas para quem está começando a cozinhar. De pratos simples a refeições completas, este livro é perfeito para quem quer aprender a cozinhar sem complicações.",
+      "ISBN0290290290",
       authors[4],
       [genres[0], genres[1]]
     ),
@@ -162,7 +163,7 @@ async function createBooks() {
       "Summary of test book 2",
       "ISBN222222",
       authors[4],
-      false
+      [genres[0], genres[1]]
     ),
   ]);
 }
@@ -196,9 +197,9 @@ async function createBookInstances() {
     bookInstanceCreate(
       5,
       books[3],
-      "New York Tom Doherty Associates, 2016.",
+      "PDF em nossos sites.",
       false,
-      "Available"
+      "Disponível"
     ),
     bookInstanceCreate(
       6,
